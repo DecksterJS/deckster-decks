@@ -9,4 +9,4 @@ node_js:
   - "0.12"
   - "0.11"
   - "0.10"
-script: cd ./packages && for D in *; do (cd "$D" && npm test); done
+script: cd ./packages && for D in *; do (cd "$D" && npm install && npm test); done

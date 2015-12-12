@@ -1,0 +1,35 @@
+{
+  "name": "deckster-deck-standard-52card",
+  "version": "0.1.0",
+  "description": "A Deckster cardset which holds all the available card types of the standard 52-card deck.",
+  "author": "Kristóf Poduszló <kripod@protonmail.com>",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "directories": {
+    "lib": "./lib"
+  },
+  "dependencies": {
+    "deckster": "^0.5.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.3.13",
+    "babel-eslint": "^4.1.6",
+    "babel-preset-es2015": "^6.3.13",
+    "esdoc": "^0.4.3",
+    "eslint": "^1.10.3",
+    "rimraf": "^2.4.4"
+  },
+  "scripts": {
+    "compile": "rimraf lib && babel -d ./lib ./src -s",
+    "test": "npm run compile -s",
+    "build-docs": "rimraf docs && mkdir docs && esdoc -c ./../../.esdoc.json",
+    "prepublish": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DecksterJS/deckster-decks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/DecksterJS/deckster-decks/issues"
+  }
+}

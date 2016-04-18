@@ -34,7 +34,7 @@ export default class Standard32CardDeck extends Deckster.Deck {
       };
 
       let rank = card.rank;
-      return (rank < 9 ? rank + 7 : rankNames[rank]) + suitNames[card.suit];
+      return (rank < 4 ? rank + 7 : rankNames[rank]) + suitNames[card.suit];
 
     } else {
       let suitNames = {
